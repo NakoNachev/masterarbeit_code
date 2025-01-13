@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "label": "Fehlende Verbindungen",
+    "label_key": "missing_connections",
+    "explanation": "Diese Metrik identifiziert Verbindungen in der Concept Map, die in der Musterlösung vorhanden sind, aber in der Lösung des Studenten fehlen."
+  },
+  {
+    "id": 2,
+    "label": "Falsch beschriftete Verbindungen",
+    "label_key": "mislabeled_connections",
+    "explanation": "Diese Metrik identifiziert Verbindungen in der Lösung des Studenten, deren Beschriftung nicht mit der Musterlösung übereinstimmt."
+  },
+  {
+    "id": 3,
+    "label": "Zusätzliche Verbindungen",
+    "label_key": "extra_connections",
+    "explanation": "Diese Metrik zeigt Verbindungen in der Lösung des Studenten, die nicht in der Musterlösung enthalten sind."
+  },
+  {
+    "id": 4,
+    "label": "Fehlende Konzepte",
+    "label_key": "missing_concepts",
+    "explanation": "Diese Metrik identifiziert Konzepte, die in der Musterlösung vorhanden sind, aber in der Lösung des Studenten fehlen."
+  },
+  {
+    "id": 5,
+    "label": "Zusätzliche Konzepte",
+    "label_key": "extra_concepts",
+    "explanation": "Diese Metrik zeigt Konzepte in der Lösung des Studenten, die nicht in der Musterlösung vorgesehen sind."
+  },
+  {
+    "id": 6,
+    "label": "Unbenutzte Labels",
+    "label_key": "unused_labels",
+    "explanation": "Diese Metrik zeigt Labels, die in der Musterlösung vorhanden sind, aber in der Lösung des Studenten nicht verwendet werden."
+  },
+  {
+    "id": 7,
+    "label": "Konzepte mit keinen Verbindungen",
+    "label_key": "isolated_concepts",
+    "explanation": "Diese Metrik identifiziert Konzepte in der Lösung des Studenten, die keine Verbindungen zu anderen Konzepten haben, im Vergleich zur Musterlösung."
+  },
+  {
+    "id": 8,
+    "label": "Topologische Ähnlichkeit",
+    "label_key": "topologic_similarity",
+    "explanation": "Diese Metrik vergleicht die Struktur der gesamten Netzwerke anhand des Jaccard-Koeffizienten."
+  },
+  {
+    "id": 9,
+    "label": "Zentralitäts-Übereinstimmung",
+    "label_key": "centrality_similarity",
+    "explanation": "Diese Metrik berechnet die Zentralität (Wichtigkeit) der Konzepte in beiden Maps und vergleicht sie."
+  },
+  {
+    "id": 10,
+    "label": "Verbindungsdichte",
+    "label_key": "connection_density",
+    "explanation": "Die Verbindungsdichte (oder Dichte) eines Netzwerks misst, wie stark die Knoten (in diesem Fall die Konzepte des Studenten) miteinander verbunden sind. Sie gibt an, wie viele tatsächliche Verbindungen im Vergleich zu den maximal möglichen Verbindungen existieren. Eine höhere Dichte bedeutet, dass die Konzepte stärker vernetzt sind."
+  },
+  {
+    "id": 11,
+    "label": "Graph-Zyklen",
+    "label_key": "graph_cycles",
+    "explanation": "Ein Zyklus in einem Graphen tritt auf, wenn eine Sequenz von Kanten und Knoten existiert, die einen geschlossenen Weg bildet, das heißt, der Anfangsknoten der Sequenz ist auch der Endknoten. In einer Concept Map sollen Zyklen in der Regel vermieden werden, da sie die hierarchische Struktur und das Verständnis der Beziehungen zwischen den Konzepten erschweren können. Eine azyklische Struktur fördert ein klares und geordnetes Verständnis der Konzepte."
+  }
+]

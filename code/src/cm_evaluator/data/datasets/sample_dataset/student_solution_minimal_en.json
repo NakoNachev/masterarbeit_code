@@ -1,0 +1,45 @@
+{
+  "id": 3,
+  "mnm": 3,
+  "user": 3,
+  "mnm_user_data": {
+    "nodes": [
+      {
+        "id": "1",
+        "label": "AI"
+      },
+      {
+        "id": "2",
+        "label": "Automation"
+      },
+      {
+        "id": "3",
+        "label": "Machine Learning"
+      },
+      {
+        "id": "4",
+        "label": "Natural Language Processing"
+      }
+    ],
+    "edges": [
+      {
+        "id": "7f479704-1d1b-4c77-85ff-2bf735e0f809",
+        "label": "enables",
+        "from": "1",
+        "to": "2"
+      },
+      {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "label": "uses",
+        "from": "1",
+        "to": "3"
+      },
+      {
+        "id": "42b60c17-7033-4d23-a82a-5b3fa6f9cabc",
+        "label": "includes",
+        "from": "1",
+        "to": "4"
+      }
+    ]
+  }
+}

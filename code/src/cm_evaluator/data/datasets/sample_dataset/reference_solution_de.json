@@ -1,0 +1,175 @@
+{
+    "id": 1,
+    "mnm": 1,
+    "user": 1,
+    "mnm_user_data": {
+        "nodes": [
+            {
+                "id": "1",
+                "label": "KI"
+            },
+            {
+                "id": "2",
+                "label": "Automatisierung"
+            },
+            {
+                "id": "3",
+                "label": "Maschinelles Lernen"
+            },
+            {
+                "id": "4",
+                "label": "Natürliche Sprachverarbeitung"
+            },
+            {
+                "id": "5",
+                "label": "Computer Vision"
+            },
+            {
+                "id": "6",
+                "label": "Robotik"
+            },
+            {
+                "id": "7",
+                "label": "Internet der Dinge (IoT)"
+            },
+            {
+                "id": "8",
+                "label": "Effizienz"
+            },
+            {
+                "id": "9",
+                "label": "Neuronale Netze"
+            },
+            {
+                "id": "10",
+                "label": "Algorithmen"
+            },
+            {
+                "id": "11",
+                "label": "Vorhersageanalyse"
+            },
+            {
+                "id": "12",
+                "label": "Spracherkennung"
+            },
+            {
+                "id": "13",
+                "label": "Sentimentanalyse"
+            },
+            {
+                "id": "14",
+                "label": "Sprachübersetzung"
+            },
+            {
+                "id": "15",
+                "label": "Objekte"
+            },
+            {
+                "id": "16",
+                "label": "Bilder"
+            },
+            {
+                "id": "17",
+                "label": "Gesichtserkennung"
+            }
+        ],
+        "edges": [
+            {
+                "id": "7f479704-1d1b-4c77-85ff-2bf735e0f809",
+                "label": "ermöglicht",
+                "from": "1", 
+                "to": "2"
+            },
+            {
+                "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                "label": "verwendet",
+                "from": "1",
+                "to": "3"
+            },
+            {
+                "id": "42b60c17-7033-4d23-a82a-5b3fa6f9cabc",
+                "label": "beinhaltet",
+                "from": "1",
+                "to": "4"
+            },
+            {
+                "id": "bfc3f847-7058-48e9-b89e-932deebf4228",
+                "label": "wendet an",
+                "from": "1",
+                "to": "5"
+            },
+            {
+                "id": "5c2d3c33-2b75-4acb-91f4-20d0f9ea74c8",
+                "label": "beinhaltet",
+                "from": "2",
+                "to": "6"
+            },
+            {
+                "id": "ed92bc8b-2fd3-4ab1-b3d8-bdb73985d364",
+                "label": "integriert",
+                "from": "2",
+                "to": "7"
+            },
+            {
+                "id": "9f7b4e87-38b0-46f1-8c91-bcbe9f5487cb",
+                "label": "verbessert",
+                "from": "2",
+                "to": "8"
+            },
+            {
+                "id": "4a25a10d-ff96-41e1-9f83-50f158c5c6b6",
+                "label": "nutzt",
+                "from": "3",
+                "to": "9"
+            },
+            {
+                "id": "b857be3e-d944-4eb3-9f5f-8ef916bbd452",
+                "label": "setzt ein",
+                "from": "3",
+                "to": "10"
+            },
+            {
+                "id": "b7a515ef-3738-4f87-9af8-9dbbf82792b9",
+                "label": "erreicht",
+                "from": "3",
+                "to": "11"
+            },
+            {
+                "id": "fb77265c-1e4b-4f5f-b78c-d8304a040623",
+                "label": "ermöglicht",
+                "from": "4",
+                "to": "12"
+            },
+            {
+                "id": "f8706a61-894f-4503-9054-b10952e87fd8",
+                "label": "ermöglicht",
+                "from": "4",
+                "to": "13"
+            },
+            {
+                "id": "b03f6d5d-23b5-409f-88a3-b654d3d2ac02",
+                "label": "unterstützt",
+                "from": "4",
+                "to": "14"
+            },
+            {
+                "id": "44a53cc1-6c22-49b2-bf91-63ae3c73ab93",
+                "label": "erkennt",
+                "from": "5",
+                "to": "15"
+            },
+            {
+                "id": "ad8dc182-9261-4a32-81a2-0e95dc8fcd7f",
+                "label": "analysiert",
+                "from": "5",
+                "to": "16"
+            },
+            {
+                "id": "b40925d7-ef95-43e7-8b24-b4b752c8414c",
+                "label": "wendet an",
+                "from": "5",
+                "to": "17"
+            }
+        ]
+    }
+}

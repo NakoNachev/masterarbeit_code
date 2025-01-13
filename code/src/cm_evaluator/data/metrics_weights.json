@@ -1,0 +1,30 @@
+[
+  {
+    "group_id": 1,
+    "weight": 0.5,
+    "element_weights": {
+      "missing_concepts": 0.7,
+      "extra_concepts": 0.3
+    }
+  },
+  {
+    "group_id": 2,
+    "weight": 0.4,
+    "element_weights": {
+      "missing_connections": 0.6,
+      "mislabeled_connections": 0.2,
+      "extra_connections": 0.2
+    }
+  },
+  {
+    "group_id": 3,
+    "weight": 0.1,
+    "element_weights": {
+      "isolated_concepts": 0.25,
+      "topologic_similarity": 0.05,
+      "centrality_similarity": 0.4,
+      "connection_density": 0.2,
+      "graph_cycles": 0.1
+    }
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "label": "Missing Connections",
+    "label_key": "missing_connections",
+    "explanation": "This metric identifies connections in the student's solution that are present in the reference solution but missing in the student's solution."
+  },
+  {
+    "id": 2,
+    "label": "Mislabeled Connections",
+    "label_key": "mislabeled_connections",
+    "explanation": "This metric identifies connections in the student's solution where the labeling does not match the reference solution."
+  },
+  {
+    "id": 3,
+    "label": "Extra Connections",
+    "label_key": "extra_connections",
+    "explanation": "This metric shows connections in the student's solution that are not present in the reference solution."
+  },
+  {
+    "id": 4,
+    "label": "Missing Concepts",
+    "label_key": "missing_concepts",
+    "explanation": "This metric identifies concepts that are present in the reference solution but missing in the student's solution."
+  },
+  {
+    "id": 5,
+    "label": "Extra Concepts",
+    "label_key": "extra_concepts",
+    "explanation": "This metric shows concepts in the student's solution that are not part of the reference solution."
+  },
+  {
+    "id": 6,
+    "label": "Unused Labels",
+    "label_key": "unused_labels",
+    "explanation": "This metric shows labels that are present in the reference solution but not used in the student's solution."
+  },
+  {
+    "id": 7,
+    "label": "Isolated Concepts",
+    "label_key": "isolated_concepts",
+    "explanation": "This metric identifies concepts in the student's solution that have no connections to other concepts, compared to the reference solution."
+  },
+  {
+    "id": 8,
+    "label": "Topological Similarity",
+    "label_key": "topologic_similarity",
+    "explanation": "This metric compares the structure of the entire networks using the Jaccard coefficient."
+  },
+  {
+    "id": 9,
+    "label": "Centrality Similarity",
+    "label_key": "centrality_similarity",
+    "explanation": "This metric calculates the centrality (importance) of concepts in both maps and compares them."
+  },
+  {
+    "id": 10,
+    "label": "Connection Density",
+    "label_key": "connection_density",
+    "explanation": "The connection density of a network measures how strongly the nodes (in this case, the student's concepts) are connected to each other. It indicates how many actual connections exist compared to the maximum possible connections. A higher density means the concepts are more interconnected."
+  },
+  {
+    "id": 11,
+    "label": "Graph Cycles",
+    "label_key": "graph_cycles",
+    "explanation": "A cycle in a graph occurs when a sequence of edges and nodes forms a closed path, meaning the starting node of the sequence is also the end node. In a concept map, cycles should generally be avoided as they can complicate the hierarchical structure and understanding of the relationships between concepts. An acyclic structure promotes clear and orderly comprehension of the concepts."
+  }
+]
