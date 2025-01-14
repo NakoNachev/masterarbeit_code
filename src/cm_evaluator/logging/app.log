@@ -1112,3 +1112,144 @@
 2025-01-13 18:58 - DEBUG - Calling function extra_connections
 2025-01-13 18:58 - DEBUG - The function extra_connections took 0.00000 seconds to execute. 
 2025-01-13 18:58 - DEBUG - Calling function missing_concepts
+2025-01-14 20:52 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-14 20:52 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/modules.json HTTP/1.1" 404 0
+2025-01-14 20:52 - WARNING - No sentence-transformers model found with name T-Systems-onsite/cross-en-de-roberta-sentence-transformer. Creating a new one with mean pooling.
+2025-01-14 20:52 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-01-14 20:52 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/config.json HTTP/1.1" 200 0
+2025-01-14 20:52 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-01-14 20:52 - DEBUG - https://huggingface.co:443 "GET /api/models/T-Systems-onsite/cross-en-de-roberta-sentence-transformer HTTP/1.1" 200 2237
+2025-01-14 20:52 - DEBUG - Starting evaluation for type C and user_file
+2025-01-14 20:52 - DEBUG - Evaluating concept map of user 3
+2025-01-14 20:52 - DEBUG - Read up the metrics configuration file
+2025-01-14 20:52 - DEBUG - Calling function missing_connections
+2025-01-14 20:52 - DEBUG - The function missing_connections took 0.68114 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Missing Connections', 'label_key': 'missing_connections', 'explanation': "This metric identifies connections in the student's solution that are present in the reference solution but missing in the student's solution.", 'score': 0.19, 'missing_connections': ['Computer Vision erkennt Objekte', 'KI wendet an Computer Vision', 'Natürliche Sprachverarbeitung ermöglicht Sentimentanalyse', 'Computer Vision analysiert Bilder', 'Maschinelles Lernen nutzt Neuronale Netze', 'Natürliche Sprachverarbeitung ermöglicht Spracherkennung', 'Maschinelles Lernen erreicht Vorhersageanalyse', 'Automatisierung verbessert Effizienz', 'Natürliche Sprachverarbeitung unterstützt Sprachübersetzung', 'Maschinelles Lernen setzt ein Algorithmen', 'Automatisierung beinhaltet Robotik', 'Automatisierung integriert Internet der Dinge (IoT)', 'Computer Vision wendet an Gesichtserkennung']}
+2025-01-14 20:52 - DEBUG - Calling function mislabeled_connections
+2025-01-14 20:52 - DEBUG - The function mislabeled_connections took 4.58063 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Mislabeled Connections', 'label_key': 'mislabeled_connections', 'explanation': "This metric identifies connections in the student's solution where the labeling does not match the reference solution.", 'score': 0.81, 'mislabeled_connections': ['AI enables Automation (ermöglicht)', 'AI uses Machine Learning (verwendet)', 'AI includes Natural Language Processing (beinhaltet)']}
+2025-01-14 20:52 - DEBUG - Calling function extra_connections
+2025-01-14 20:52 - DEBUG - The function extra_connections took 4.46592 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Extra Connections', 'label_key': 'extra_connections', 'explanation': "This metric shows connections in the student's solution that are not present in the reference solution.", 'score': 1.0, 'extra_connections': []}
+2025-01-14 20:52 - DEBUG - Calling function missing_concepts
+2025-01-14 20:52 - DEBUG - The function missing_concepts took 2.81176 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Missing Concepts', 'label_key': 'missing_concepts', 'explanation': "This metric identifies concepts that are present in the reference solution but missing in the student's solution.", 'score': 0.24, 'concepts_importance': {'KI': 'medium', 'Automatisierung': 'high', 'Maschinelles Lernen': 'high', 'Natürliche Sprachverarbeitung': 'high', 'Computer Vision': 'high', 'Robotik': 'low', 'Internet der Dinge (IoT)': 'low', 'Effizienz': 'low', 'Neuronale Netze': 'low', 'Algorithmen': 'low', 'Vorhersageanalyse': 'low', 'Spracherkennung': 'low', 'Sentimentanalyse': 'low', 'Sprachübersetzung': 'low', 'Objekte': 'low', 'Bilder': 'low', 'Gesichtserkennung': 'low'}, 'missing_concepts_importance': {'Computer Vision': 'high', 'Robotik': 'low', 'Internet der Dinge (IoT)': 'low', 'Effizienz': 'low', 'Neuronale Netze': 'low', 'Algorithmen': 'low', 'Vorhersageanalyse': 'low', 'Spracherkennung': 'low', 'Sentimentanalyse': 'low', 'Sprachübersetzung': 'low', 'Objekte': 'low', 'Bilder': 'low', 'Gesichtserkennung': 'low'}, 'missing_concepts': ['Spracherkennung', 'Bilder', 'Sentimentanalyse', 'Internet der Dinge (IoT)', 'Sprachübersetzung', 'Effizienz', 'Algorithmen', 'Neuronale Netze', 'Robotik', 'Objekte', 'Vorhersageanalyse', 'Gesichtserkennung', 'Computer Vision']}
+2025-01-14 20:52 - DEBUG - Calling function extra_concepts
+2025-01-14 20:52 - DEBUG - The function extra_concepts took 2.53946 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Extra Concepts', 'label_key': 'extra_concepts', 'explanation': "This metric shows concepts in the student's solution that are not part of the reference solution.", 'score': 1, 'extra_concepts': []}
+2025-01-14 20:52 - DEBUG - Calling function unused_edge_labels
+2025-01-14 20:52 - DEBUG - The function unused_edge_labels took 1.31773 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Unused Labels', 'label_key': 'unused_labels', 'explanation': "This metric shows labels that are present in the reference solution but not used in the student's solution.", 'score': 0.33, 'unused_labels': ['erkennt', 'integriert', 'analysiert', 'wendet an', 'erreicht', 'setzt ein', 'verbessert', 'unterstützt']}
+2025-01-14 20:52 - DEBUG - Calling function isolates
+2025-01-14 20:52 - DEBUG - The function isolates took 0.00000 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Isolated Concepts', 'label_key': 'isolated_concepts', 'explanation': "This metric identifies concepts in the student's solution that have no connections to other concepts, compared to the reference solution.", 'score': 1, 'isolated_concepts': []}
+2025-01-14 20:52 - DEBUG - Calling function topologic_similarity
+2025-01-14 20:52 - DEBUG - The function topologic_similarity took 0.70401 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Topological Similarity', 'label_key': 'topologic_similarity', 'explanation': 'This metric compares the structure of the entire networks using the Jaccard coefficient.', 'score': 0.19}
+2025-01-14 20:52 - DEBUG - Calling function get_centrality_similarity
+2025-01-14 20:52 - DEBUG - The function get_centrality_similarity took 2.78497 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Centrality Similarity', 'label_key': 'centrality_similarity', 'explanation': 'This metric calculates the centrality (importance) of concepts in both maps and compares them.', 'score': 0.5, 'centrality_abs_difference': {'AI': 1.0, 'Automation': 0.3333, 'Machine Learning': 0.3333, 'Natural Language Processing': 0.3333}}
+2025-01-14 20:52 - DEBUG - Calling function get_density_difference
+2025-01-14 20:52 - DEBUG - The function get_density_difference took 0.00000 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Connection Density', 'label_key': 'connection_density', 'explanation': "The connection density of a network measures how strongly the nodes (in this case, the student's concepts) are connected to each other. It indicates how many actual connections exist compared to the maximum possible connections. A higher density means the concepts are more interconnected.", 'score': 0.5, 'student_density': 0.25, 'master_density': 0.0588}
+2025-01-14 20:52 - DEBUG - Calling function get_cycles
+2025-01-14 20:52 - DEBUG - The function get_cycles took 0.00101 seconds to execute. 
+2025-01-14 20:52 - DEBUG - got metric {'label': 'Graph Cycles', 'label_key': 'graph_cycles', 'explanation': 'A cycle in a graph occurs when a sequence of edges and nodes forms a closed path, meaning the starting node of the sequence is also the end node. In a concept map, cycles should generally be avoided as they can complicate the hierarchical structure and understanding of the relationships between concepts. An acyclic structure promotes clear and orderly comprehension of the concepts.', 'score': 1, 'cycles_student': [], 'cycles_master': []}
+2025-01-14 20:52 - DEBUG - Started dumping metrics output in the output file
+2025-01-14 20:52 - DEBUG - Calling function calculate_group_score
+2025-01-14 20:52 - DEBUG - The function calculate_group_score took 0.00900 seconds to execute. 
+2025-01-14 20:52 - DEBUG - Finished evaluating user_file
+2025-01-14 20:53 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-14 20:53 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/modules.json HTTP/1.1" 404 0
+2025-01-14 20:53 - WARNING - No sentence-transformers model found with name T-Systems-onsite/cross-en-de-roberta-sentence-transformer. Creating a new one with mean pooling.
+2025-01-14 20:53 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-01-14 20:53 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/config.json HTTP/1.1" 200 0
+2025-01-14 20:53 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-01-14 20:53 - DEBUG - https://huggingface.co:443 "GET /api/models/T-Systems-onsite/cross-en-de-roberta-sentence-transformer HTTP/1.1" 200 2237
+2025-01-14 20:53 - DEBUG - Starting evaluation for type C and user_file
+2025-01-14 20:53 - DEBUG - Evaluating concept map of user 3
+2025-01-14 20:53 - DEBUG - Read up the metrics configuration file
+2025-01-14 20:53 - DEBUG - Calling function missing_connections
+2025-01-14 20:53 - DEBUG - The function missing_connections took 0.69908 seconds to execute. 
+2025-01-14 20:53 - DEBUG - got metric {'label': 'Missing Connections', 'label_key': 'missing_connections', 'explanation': "This metric identifies connections in the student's solution that are present in the reference solution but missing in the student's solution.", 'score': 0.69, 'missing_connections': ['Maschinelles Lernen setzt ein Algorithmen', 'Computer Vision wendet an Gesichtserkennung', 'Automatisierung integriert Internet der Dinge (IoT)', 'Maschinelles Lernen nutzt Neuronale Netze', 'KI wendet an Computer Vision']}
+2025-01-14 20:53 - DEBUG - Calling function mislabeled_connections
+2025-01-14 20:53 - DEBUG - The function mislabeled_connections took 19.86309 seconds to execute. 
+2025-01-14 20:53 - DEBUG - got metric {'label': 'Mislabeled Connections', 'label_key': 'mislabeled_connections', 'explanation': "This metric identifies connections in the student's solution where the labeling does not match the reference solution.", 'score': 0.25, 'mislabeled_connections': ['AI enables Automation (ermöglicht)', 'AI uses Machine Learning (verwendet)', 'AI includes Natural Language Processing (beinhaltet)', 'Automation includes Robotics (beinhaltet)', 'Automation improves Efficiency (verbessert)', 'Machine Learning defeats Algorithms (setzt ein)', 'Machine Learning achieves Predictive Analytics (erreicht)', 'Natural Language Processing enables Speech Recognition (ermöglicht)', 'Natural Language Processing enables Sentiment Analysis (ermöglicht)', 'Natural Language Processing supports Language Translation (unterstützt)', 'Computer Vision detects Objects (erkennt)', 'Computer Vision analyzes Images (analysiert)']}
+2025-01-14 20:53 - DEBUG - Calling function extra_connections
+2025-01-14 20:53 - DEBUG - The function extra_connections took 20.26826 seconds to execute. 
+2025-01-14 20:53 - DEBUG - got metric {'label': 'Extra Connections', 'label_key': 'extra_connections', 'explanation': "This metric shows connections in the student's solution that are not present in the reference solution.", 'score': 0.81, 'extra_connections': ['AI utilizes Wi-Fi', 'Automation reduces Human Errors', 'Computer Vision utilizes Colors']}
+2025-01-14 20:53 - DEBUG - Calling function missing_concepts
+2025-01-14 20:54 - DEBUG - The function missing_concepts took 13.34580 seconds to execute. 
+2025-01-14 20:54 - DEBUG - got metric {'label': 'Missing Concepts', 'label_key': 'missing_concepts', 'explanation': "This metric identifies concepts that are present in the reference solution but missing in the student's solution.", 'score': 0.82, 'concepts_importance': {'KI': 'medium', 'Automatisierung': 'high', 'Maschinelles Lernen': 'high', 'Natürliche Sprachverarbeitung': 'high', 'Computer Vision': 'high', 'Robotik': 'low', 'Internet der Dinge (IoT)': 'low', 'Effizienz': 'low', 'Neuronale Netze': 'low', 'Algorithmen': 'low', 'Vorhersageanalyse': 'low', 'Spracherkennung': 'low', 'Sentimentanalyse': 'low', 'Sprachübersetzung': 'low', 'Objekte': 'low', 'Bilder': 'low', 'Gesichtserkennung': 'low'}, 'missing_concepts_importance': {'Internet der Dinge (IoT)': 'low', 'Neuronale Netze': 'low', 'Gesichtserkennung': 'low'}, 'missing_concepts': ['Internet der Dinge (IoT)', 'Gesichtserkennung', 'Neuronale Netze']}
+2025-01-14 20:54 - DEBUG - Calling function extra_concepts
+2025-01-14 20:54 - DEBUG - The function extra_concepts took 12.26196 seconds to execute. 
+2025-01-14 20:54 - DEBUG - got metric {'label': 'Extra Concepts', 'label_key': 'extra_concepts', 'explanation': "This metric shows concepts in the student's solution that are not part of the reference solution.", 'score': 0.78, 'extra_concepts': ['Isolated Concept', 'Human Errors', 'Wi-Fi', 'Colors']}
+2025-01-14 20:54 - DEBUG - Calling function unused_edge_labels
+2025-01-14 20:54 - DEBUG - The function unused_edge_labels took 6.51140 seconds to execute. 
+2025-01-14 20:54 - DEBUG - got metric {'label': 'Unused Labels', 'label_key': 'unused_labels', 'explanation': "This metric shows labels that are present in the reference solution but not used in the student's solution.", 'score': 0.75, 'unused_labels': ['integriert', 'setzt ein', 'wendet an']}
+2025-01-14 20:54 - DEBUG - Calling function isolates
+2025-01-14 20:54 - DEBUG - The function isolates took 0.00000 seconds to execute. 
+2025-01-14 20:54 - DEBUG - got metric {'label': 'Isolated Concepts', 'label_key': 'isolated_concepts', 'explanation': "This metric identifies concepts in the student's solution that have no connections to other concepts, compared to the reference solution.", 'score': 0.94, 'isolated_concepts': ['Isolated Concept']}
+2025-01-14 20:54 - DEBUG - Calling function topologic_similarity
+2025-01-14 20:54 - DEBUG - The function topologic_similarity took 1.80068 seconds to execute. 
+2025-01-14 20:54 - DEBUG - got metric {'label': 'Topological Similarity', 'label_key': 'topologic_similarity', 'explanation': 'This metric compares the structure of the entire networks using the Jaccard coefficient.', 'score': 0.52}
+2025-01-14 20:54 - DEBUG - Calling function get_centrality_similarity
+2025-01-14 20:54 - DEBUG - The function get_centrality_similarity took 12.05010 seconds to execute. 
+2025-01-14 20:54 - DEBUG - got metric {'label': 'Centrality Similarity', 'label_key': 'centrality_similarity', 'explanation': 'This metric calculates the centrality (importance) of concepts in both maps and compares them.', 'score': 0.89, 'centrality_abs_difference': {'AI': 0.2353, 'Automation': 0.2353, 'Machine Learning': 0.1765, 'Natural Language Processing': 0.2353, 'Robotics': 0.0588, 'Efficiency': 0.0588, 'Algorithms': 0.0588, 'Predictive Analytics': 0.0588, 'Speech Recognition': 0.0588, 'Sentiment Analysis': 0.0588, 'Language Translation': 0.0588, 'Computer Vision': 0.0147, 'Objects': 0.1176, 'Images': 0.0588}}
+2025-01-14 20:54 - DEBUG - Calling function get_density_difference
+2025-01-14 20:54 - DEBUG - The function get_density_difference took 0.00000 seconds to execute. 
+2025-01-14 20:54 - DEBUG - got metric {'label': 'Connection Density', 'label_key': 'connection_density', 'explanation': "The connection density of a network measures how strongly the nodes (in this case, the student's concepts) are connected to each other. It indicates how many actual connections exist compared to the maximum possible connections. A higher density means the concepts are more interconnected.", 'score': 1, 'student_density': 0.0523, 'master_density': 0.0588}
+2025-01-14 20:54 - DEBUG - Calling function get_cycles
+2025-01-14 20:54 - DEBUG - The function get_cycles took 0.00100 seconds to execute. 
+2025-01-14 20:54 - DEBUG - got metric {'label': 'Graph Cycles', 'label_key': 'graph_cycles', 'explanation': 'A cycle in a graph occurs when a sequence of edges and nodes forms a closed path, meaning the starting node of the sequence is also the end node. In a concept map, cycles should generally be avoided as they can complicate the hierarchical structure and understanding of the relationships between concepts. An acyclic structure promotes clear and orderly comprehension of the concepts.', 'score': 0.75, 'cycles_student': [['Computer Vision', 'Objects']], 'cycles_master': []}
+2025-01-14 20:54 - DEBUG - Started dumping metrics output in the output file
+2025-01-14 20:54 - DEBUG - Calling function calculate_group_score
+2025-01-14 20:54 - DEBUG - The function calculate_group_score took 0.00000 seconds to execute. 
+2025-01-14 20:54 - DEBUG - Finished evaluating user_file
+2025-01-14 20:55 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-01-14 20:55 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/modules.json HTTP/1.1" 404 0
+2025-01-14 20:55 - WARNING - No sentence-transformers model found with name T-Systems-onsite/cross-en-de-roberta-sentence-transformer. Creating a new one with mean pooling.
+2025-01-14 20:55 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-01-14 20:55 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/config.json HTTP/1.1" 200 0
+2025-01-14 20:55 - DEBUG - https://huggingface.co:443 "HEAD /T-Systems-onsite/cross-en-de-roberta-sentence-transformer/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-01-14 20:55 - DEBUG - https://huggingface.co:443 "GET /api/models/T-Systems-onsite/cross-en-de-roberta-sentence-transformer HTTP/1.1" 200 2237
+2025-01-14 20:55 - DEBUG - Starting evaluation for type C and user_file
+2025-01-14 20:55 - DEBUG - Evaluating concept map of user 3
+2025-01-14 20:55 - DEBUG - Read up the metrics configuration file
+2025-01-14 20:55 - DEBUG - Calling function missing_connections
+2025-01-14 20:55 - DEBUG - The function missing_connections took 0.73278 seconds to execute. 
+2025-01-14 20:55 - DEBUG - got metric {'label': 'Missing Connections', 'label_key': 'missing_connections', 'explanation': "This metric identifies connections in the student's solution that are present in the reference solution but missing in the student's solution.", 'score': 0.75, 'missing_connections': ['Computer Vision applies Facial Recognition', 'Automation integrates Internet of Things (IoT)', 'AI applies Computer Vision', 'Machine Learning utilizes Neural Networks']}
+2025-01-14 20:55 - DEBUG - Calling function mislabeled_connections
+2025-01-14 20:55 - DEBUG - The function mislabeled_connections took 1.93161 seconds to execute. 
+2025-01-14 20:55 - DEBUG - got metric {'label': 'Mislabeled Connections', 'label_key': 'mislabeled_connections', 'explanation': "This metric identifies connections in the student's solution where the labeling does not match the reference solution.", 'score': 0.94, 'mislabeled_connections': ['Machine Learning defeats Algorithms (employs)']}
+2025-01-14 20:55 - DEBUG - Calling function extra_connections
+2025-01-14 20:55 - DEBUG - The function extra_connections took 2.01613 seconds to execute. 
+2025-01-14 20:55 - DEBUG - got metric {'label': 'Extra Connections', 'label_key': 'extra_connections', 'explanation': "This metric shows connections in the student's solution that are not present in the reference solution.", 'score': 0.81, 'extra_connections': ['AI utilizes Wi-Fi', 'Automation reduces Human Errors', 'Computer Vision utilizes Colors']}
+2025-01-14 20:55 - DEBUG - Calling function missing_concepts
+2025-01-14 20:55 - DEBUG - The function missing_concepts took 11.97544 seconds to execute. 
+2025-01-14 20:55 - DEBUG - got metric {'label': 'Missing Concepts', 'label_key': 'missing_concepts', 'explanation': "This metric identifies concepts that are present in the reference solution but missing in the student's solution.", 'score': 0.82, 'concepts_importance': {'AI': 'medium', 'Automation': 'high', 'Machine Learning': 'high', 'Natural Language Processing': 'high', 'Computer Vision': 'high', 'Robotics': 'low', 'Internet of Things (IoT)': 'low', 'Efficiency': 'low', 'Neural Networks': 'low', 'Algorithms': 'low', 'Predictive Analytics': 'low', 'Speech Recognition': 'low', 'Sentiment Analysis': 'low', 'Language Translation': 'low', 'Objects': 'low', 'Images': 'low', 'Facial Recognition': 'low'}, 'missing_concepts_importance': {'Internet of Things (IoT)': 'low', 'Neural Networks': 'low', 'Facial Recognition': 'low'}, 'missing_concepts': ['Internet of Things (IoT)', 'Facial Recognition', 'Neural Networks']}
+2025-01-14 20:55 - DEBUG - Calling function extra_concepts
+2025-01-14 20:55 - DEBUG - The function extra_concepts took 2.92400 seconds to execute. 
+2025-01-14 20:55 - DEBUG - got metric {'label': 'Extra Concepts', 'label_key': 'extra_concepts', 'explanation': "This metric shows concepts in the student's solution that are not part of the reference solution.", 'score': 0.78, 'extra_concepts': ['Human Errors', 'Wi-Fi', 'Colors', 'Isolated Concept']}
+2025-01-14 20:55 - DEBUG - Calling function unused_edge_labels
+2025-01-14 20:55 - DEBUG - The function unused_edge_labels took 6.37321 seconds to execute. 
+2025-01-14 20:55 - DEBUG - got metric {'label': 'Unused Labels', 'label_key': 'unused_labels', 'explanation': "This metric shows labels that are present in the reference solution but not used in the student's solution.", 'score': 0.92, 'unused_labels': ['integrates']}
+2025-01-14 20:55 - DEBUG - Calling function isolates
+2025-01-14 20:55 - DEBUG - The function isolates took 0.00000 seconds to execute. 
+2025-01-14 20:55 - DEBUG - got metric {'label': 'Isolated Concepts', 'label_key': 'isolated_concepts', 'explanation': "This metric identifies concepts in the student's solution that have no connections to other concepts, compared to the reference solution.", 'score': 0.94, 'isolated_concepts': ['Isolated Concept']}
+2025-01-14 20:55 - DEBUG - Calling function topologic_similarity
+2025-01-14 20:55 - DEBUG - The function topologic_similarity took 1.42914 seconds to execute. 
+2025-01-14 20:55 - DEBUG - got metric {'label': 'Topological Similarity', 'label_key': 'topologic_similarity', 'explanation': 'This metric compares the structure of the entire networks using the Jaccard coefficient.', 'score': 0.6}
+2025-01-14 20:55 - DEBUG - Calling function get_centrality_similarity
+2025-01-14 20:56 - DEBUG - The function get_centrality_similarity took 13.42054 seconds to execute. 
+2025-01-14 20:56 - DEBUG - got metric {'label': 'Centrality Similarity', 'label_key': 'centrality_similarity', 'explanation': 'This metric calculates the centrality (importance) of concepts in both maps and compares them.', 'score': 0.98, 'centrality_abs_difference': {'AI': 0.0147, 'Automation': 0.0147, 'Machine Learning': 0.0735, 'Natural Language Processing': 0.0147, 'Robotics': 0.0037, 'Efficiency': 0.0037, 'Algorithms': 0.0037, 'Predictive Analytics': 0.0037, 'Speech Recognition': 0.0037, 'Sentiment Analysis': 0.0037, 'Language Translation': 0.0037, 'Computer Vision': 0.0147, 'Objects': 0.0551, 'Images': 0.0037}}
+2025-01-14 20:56 - DEBUG - Calling function get_density_difference
+2025-01-14 20:56 - DEBUG - The function get_density_difference took 0.00000 seconds to execute. 
+2025-01-14 20:56 - DEBUG - got metric {'label': 'Connection Density', 'label_key': 'connection_density', 'explanation': "The connection density of a network measures how strongly the nodes (in this case, the student's concepts) are connected to each other. It indicates how many actual connections exist compared to the maximum possible connections. A higher density means the concepts are more interconnected.", 'score': 1, 'student_density': 0.0523, 'master_density': 0.0588}
+2025-01-14 20:56 - DEBUG - Calling function get_cycles
+2025-01-14 20:56 - DEBUG - The function get_cycles took 0.00099 seconds to execute. 
+2025-01-14 20:56 - DEBUG - got metric {'label': 'Graph Cycles', 'label_key': 'graph_cycles', 'explanation': 'A cycle in a graph occurs when a sequence of edges and nodes forms a closed path, meaning the starting node of the sequence is also the end node. In a concept map, cycles should generally be avoided as they can complicate the hierarchical structure and understanding of the relationships between concepts. An acyclic structure promotes clear and orderly comprehension of the concepts.', 'score': 0.75, 'cycles_student': [['Objects', 'Computer Vision']], 'cycles_master': []}
+2025-01-14 20:56 - DEBUG - Started dumping metrics output in the output file
+2025-01-14 20:56 - DEBUG - Calling function calculate_group_score
+2025-01-14 20:56 - DEBUG - The function calculate_group_score took 0.00000 seconds to execute. 
+2025-01-14 20:56 - DEBUG - Finished evaluating user_file

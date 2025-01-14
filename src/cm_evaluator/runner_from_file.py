@@ -25,8 +25,8 @@ def main():
     logger.debug(f'Starting evaluation for type {type} and user_file')
 
     target_dir = "cm_evaluator.data.datasets.sample_dataset"
-    reference_file = "reference_solution_de.json"
-    student_file = "student_solution_minimal_en.json"
+    reference_file = "reference_solution_en.json"
+    student_file = "student_solution_full_en.json"
     language = "en"
 
     with open(files(target_dir).joinpath(reference_file), 'r', encoding='utf-8') as fd:
