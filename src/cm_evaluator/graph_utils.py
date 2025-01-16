@@ -95,18 +95,18 @@ def adjacency_matrix_similarity(graph1, graph2):
     union = np.logical_or(adj_matrix1, adj_matrix2).sum()
     return intersection / union
 
-def are_edges_equivalent(edge1, edge2, graph1: nx.DiGraph, graph2: nx.DiGraph,  model: SentenceTransformer):
-    nodes_similar = (
-        words_are_similar(edge1[0], edge2[0], model) and words_are_similar(edge1[1], edge2[1], model)
-    )
-    edge1_data = graph1.get_edge_data(edge1[0], edge1[1])
-    edge2_data = graph2.get_edge_data(edge2[0], edge2[1])
-    label_similar = True
-    if edge1_data and edge2_data:
-        label1 = edge1_data.get("label", None)
-        label2 = edge2_data.get("label", None)
-        label_similar = words_are_similar(label1, label2, model, is_label=True)
-    return nodes_similar and label_similar
+# def are_edges_equivalent(edge1, edge2, graph1: nx.DiGraph, graph2: nx.DiGraph,  model: SentenceTransformer):
+#     nodes_similar = (
+#         words_are_similar(edge1[0], edge2[0], model) and words_are_similar(edge1[1], edge2[1], model)
+#     )
+#     edge1_data = graph1.get_edge_data(edge1[0], edge1[1])
+#     edge2_data = graph2.get_edge_data(edge2[0], edge2[1])
+#     label_similar = True
+#     if edge1_data and edge2_data:
+#         label1 = edge1_data.get("label", None)
+#         label2 = edge2_data.get("label", None)
+#         label_similar = words_are_similar(label1, label2, model, is_label=True)
+#     return nodes_similar and label_similar
  
 def jaccard_similarity_with_synonyms(student_relations: List[MapRelation], master_relations: List[MapRelation],
                                     model: SentenceTransformer):

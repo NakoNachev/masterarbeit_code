@@ -155,27 +155,56 @@ def common_words(words1: List[str], words2: List[str], model: SentenceTransforme
             similar_concepts.append(word)
     return similar_concepts
 
+# def get_remaining_master_sentences(
+#         master_sentences: List[str], 
+#         student_sentences: List[str], 
+#         model: SentenceTransformer, 
+#         threshold: float = 0.8):
+#     """ Returns the sentences from the master solution that were not correctly identified
+#     Correctly identified sentences = sentence which has either 1.0 or >= threshold similarity
+#     with at least one of the master solution sentences"""
+#     correct_sentences = []
+
+#     if len(student_sentences) == 0:
+#         return set(master_sentences)
+
+#     matrix = get_nearest_sentence_matrix(master_sentences, student_sentences, model)
+#     print("matrix", matrix)
+    
+#     for i, sentence in enumerate(master_sentences):
+#         best_match_i = np.argmax(matrix[i])
+#         similarity = round(matrix[i][best_match_i],2)
+#         if similarity == 1 or similarity >= threshold:
+#             correct_sentences.append(sentence)
+#     return set(master_sentences) - set(correct_sentences)
+
+
 def get_remaining_master_sentences(
         master_sentences: List[str], 
         student_sentences: List[str], 
         model: SentenceTransformer, 
         threshold: float = 0.8):
-    """ Returns the sentences from the master solution that were not correctly identified
-    Correctly identified sentences = sentence which has either 1.0 or >= threshold similarity
-    with at least one of the master solution sentences"""
-    correct_sentences = []
+    """
+    Returns the master sentences that do not have a sufficiently similar match in the student solution.
+    Ensures that each student sentence can only match one master sentence.
+    """
     if len(student_sentences) == 0:
         return set(master_sentences)
 
     matrix = get_nearest_sentence_matrix(master_sentences, student_sentences, model)
-    
+    correct_sentences = set()
+    used_column_indexes = set()
+
     for i, sentence in enumerate(master_sentences):
-        best_match_i = np.argmax(matrix[i])
-        similarity = round(matrix[i][best_match_i],2)
-        
-        if similarity == 1 or similarity >= threshold:
-            correct_sentences.append(sentence)
-    return set(master_sentences) - set(correct_sentences)
+        best_match_idx = np.argmax(matrix[i])
+        similarity = round(matrix[i][best_match_idx],2)
+
+        if similarity >= threshold and best_match_idx not in used_column_indexes:
+            correct_sentences.add(sentence)
+            used_column_indexes.add(best_match_idx)
+
+    return set(master_sentences) - correct_sentences
+
 
 def assign_node_importance_weights(graph: nx.DiGraph) -> Dict[str, float]:
     ''' Calculates the node importance weights based on the ingoing and outgoing nodes'''

@@ -1,9 +1,6 @@
 import json
 import importlib
 from importlib.resources import files
-from pathlib import Path
-import subprocess
-import sys
 
 from cm_evaluator.models.user_data import MapOutput
 from sentence_transformers import SentenceTransformer
@@ -26,7 +23,7 @@ def main():
 
     target_dir = "cm_evaluator.data.datasets.sample_dataset"
     reference_file = "reference_solution_en.json"
-    student_file = "student_solution_full_en.json"
+    student_file = "student_solution_minimal_en.json"
     language = "en"
 
     with open(files(target_dir).joinpath(reference_file), 'r', encoding='utf-8') as fd:

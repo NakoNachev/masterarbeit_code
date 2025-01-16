@@ -39,7 +39,7 @@ def evaluate(
         "1": {"func_name": "missing_connections", "args": [student_relations, master_relations, model, metric_configs], "common_func": True},
         "2": {"func_name": "mislabeled_connections", "args": [student_relations, master_relations, model, metric_configs]},
         "3": {"func_name": "extra_connections", "args": [G_student, G_master, metric_configs], "common_func": True},
-        "4": {"func_name": "missing_concepts", "args": [student_concepts, master_concepts, G_master, metric_configs], "common_func": True},
+        "4": {"func_name": "missing_concepts", "args": [student_concepts, master_concepts, G_master, language, metric_configs], "common_func": True},
         "5": {"func_name": "extra_concepts", "args": [student_concepts, master_concepts, metric_configs], "common_func": True},
         "6": {"func_name": "unused_edge_labels", "args": [student_relations, master_relations, model, metric_configs]},
         "7": {"func_name": "isolates", "args": [G_student, metric_configs], "common_func": True},
@@ -122,15 +122,16 @@ def unused_edge_labels(
         model: SentenceTransformer,
         metric_configs: List[MetricConfiguration]):
     # metric id 6
-    student_edge_labels = list(set([item.relation_label for item in relations_student]))
-    master_edge_labels = list(set([item.relation_label for item in relations_master]))
     reference_config = next((config for config in metric_configs if config.id == 6), None)
 
     if reference_config:
 
+        student_edge_labels = list(set([item.relation_label for item in relations_student]))
+        master_edge_labels = list(set([item.relation_label for item in relations_master]))
+        
         similar_labels = []
         for m_label in master_edge_labels:
-            similar = list(filter(lambda s_label: words_are_similar(s_label, m_label, model, True), student_edge_labels))
+            similar = list(filter(lambda s_label: words_are_similar(s_label, m_label, model), student_edge_labels))
             if similar:
                 similar_labels.append(m_label)
         

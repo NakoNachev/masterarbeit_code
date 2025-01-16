@@ -40,7 +40,7 @@ def evaluate(
         "1": {"func_name": "missing_connections", "args": [student_relations, master_relations, metric_configs]},
         "2": {"func_name": "mislabeled_connections", "args": [student_relations, master_relations, metric_configs]},
         "3": {"func_name": "extra_connections", "args": [G_student, G_master, metric_configs], "common_func": True},
-        "4": {"func_name": "missing_concepts", "args": [student_concepts, master_concepts, G_master, metric_configs], "common_func": True},
+        "4": {"func_name": "missing_concepts", "args": [student_concepts, master_concepts, G_master, language, metric_configs], "common_func": True},
         "5": {"func_name": "extra_concepts", "args": [student_concepts, master_concepts, metric_configs], "common_func": True},
         "6": {"func_name": "unused_edge_labels", "args": [student_relations, master_relations, metric_configs]},
         "7": {"func_name": "isolates", "args": [G_student, metric_configs], "common_func": True},

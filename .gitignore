@@ -1,1 +1,5 @@
 venv
+*.log
+*.egg-info/
+*.egg
+__pycache__/

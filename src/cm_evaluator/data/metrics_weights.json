@@ -12,8 +12,9 @@
     "weight": 0.4,
     "element_weights": {
       "missing_connections": 0.6,
-      "mislabeled_connections": 0.2,
-      "extra_connections": 0.2
+      "mislabeled_connections": 0.15,
+      "extra_connections": 0.2,
+      "unused_labels": 0.05
     }
   },
   {

@@ -1,3 +1,0 @@
-[console_scripts]
-run = cm_evaluator.process:main
-start_api = cm_evaluator.api.run:app
