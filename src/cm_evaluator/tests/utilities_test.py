@@ -1,4 +1,4 @@
-from cm_evaluator.utilities import get_remaining_master_sentences
+from cm_evaluator.utilities import get_most_similar_word, get_remaining_master_sentences, words_are_similar
 
 
 def test_get_remaining_master_sentences(model):
@@ -40,3 +40,38 @@ def test_get_remaining_master_sentences(model):
         "Machine Learning employs Algorithms",
         "Natural Language Processing enables Speech Recognition"]
     
+def test_words_are_similar(model):
+    # base case identical words
+    w1 = "dog"
+    w2 = "dog"
+    assert words_are_similar(w1, w2, model) == True
+    
+    w1 = "dog"
+    w2 = "canine"
+    assert words_are_similar(w1, w2, model) == True
+    
+    w1 = "car"
+    w2 = "auto"
+    assert words_are_similar(w1, w2, model) == True
+    # case german
+    
+    w1 = "Auto"
+    w2 = "Wagen"
+    assert words_are_similar(w1, w2, model) == True
+    
+    w1 = 'zählt zu den'
+    w2 = 'zählt zu den'
+    assert words_are_similar(w1, w2, model, True) == True
+
+
+def test_most_similar_word(model):
+    word = 'AI'
+    candidates = ['Computer Vision', 'Automation', 'AI']
+
+    assert get_most_similar_word(word, candidates, model) == 'AI'
+
+    # should work cross language
+    word = 'AI'
+    candidates = ['Computer Vision', 'Automation', 'KI']
+
+    assert get_most_similar_word(word, candidates, model) == 'KI'

@@ -46,7 +46,11 @@ class MnmUserData(BaseModel):
     nodes: List[Node]
     edges: List[Edge]
 
-class MapOutput(BaseModel):
+class StrictBaseModel(BaseModel):
+    class Config:
+        extra="forbid"
+
+class MapOutput(StrictBaseModel):
     id: int
     mnm: int
     user: int

@@ -16,6 +16,8 @@ model = SentenceTransformer('T-Systems-onsite/cross-en-de-roberta-sentence-trans
 # nlp_de = spacy.load("de_core_news_lg")
 
 class MapCompareOptions(BaseModel):
+    class Config:
+        extra="forbid"
     evaluator: Optional[Literal["A", "B", "C"]] = "C"
     language: Optional[Literal["de", "en"]] = "en"
 
@@ -29,10 +31,6 @@ class MapCompareBody(BaseModel):
 @app.get("/")
 async def get_root():
     return {"Hello": "World"}
-
-@app.post("/")
-async def create_item(map: MapOutput):
-    return map
 
 @app.post("/compare-maps")
 async def compare_maps(body: MapCompareBody):
