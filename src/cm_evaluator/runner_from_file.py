@@ -11,7 +11,6 @@ from cm_evaluator.logging.base_logger import logger
 def main():
 
     # choose which evaluator to use
-    type='C'
     module_mapper = {
         "A": "evaluators.evaluatorA",
         "B": "evaluators.evaluatorB",
@@ -28,6 +27,7 @@ def main():
     reference_file = "reference_solution_en.json"
     student_file = "student_solution_minimal_en.json"
     language: Literal['en', 'de'] = "en"
+    evaluator_type='C'
 
     logger.debug(f'Starting evaluation for type {type} and file {student_file}')
     with open(files(dataset_dir).joinpath(reference_file), 'r', encoding='utf-8') as fd:
@@ -39,7 +39,7 @@ def main():
         cm_student = MapOutput(**t)
 
     # run the evaluator function for the chosen evaluator
-    module = importlib.import_module(module_mapper.get(type, None), )
+    module = importlib.import_module(module_mapper.get(evaluator_type, None), )
     module.evaluate(cm_student, cm_master, model, language, True)
     logger.debug(f'Finished evaluating file {student_file}')
 

@@ -1,5 +1,6 @@
 venv
 *.log
+.vscode
 *.egg-info/
 *.egg
 __pycache__/

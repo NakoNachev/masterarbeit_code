@@ -22,8 +22,6 @@ source <venv-name>/Scripts/activate
 Then you need to install tha package into the virtual environment.
 The example below will make an editable install of the package (more can be read here: https://setuptools.pypa.io/en/latest/userguide/development_mode.html). Take note the command has to be executed within an activated virtual environment and from the root folder, where the pyproject.toml file is located.
 
-For this current setup it is under /code.
-
 ```
 pip install -e .
 ```
@@ -44,3 +42,7 @@ uvicorn cm_evaluator.api.main:app --reload
 You can also specify various options like port, reload, etc (more on options can be read here: https://www.uvicorn.org/settings/)
 
 After that you can navigate to "<host>:<port>/docs" to use the swagger docs for the API (default under localhost will be http://127.0.0.1:8000/docs#)
+
+## Usage Videos
+
+The project contains two tutorial videos that explain in detail how the evaluations can be started. These can be located under /tutorial_videos.

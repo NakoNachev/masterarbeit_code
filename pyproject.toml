@@ -31,8 +31,6 @@ where = ["src"]
 [tool.setuptools.package-data]
 "*" = ["*.csv"]
 
-[tool.spacy.models]
-de_core_new_lg = "3.7.0"
 
 [project.optional-dependencies]
 test = ["pytest"]
