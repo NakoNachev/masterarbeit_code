@@ -1,5 +1,7 @@
 ## Prerequisites
 
+The project expects a python version >= 3.10, so make sure you create the venv with a similar to higher version of python.
+
 In order to start the project, first you need a couple of things:
 Create a virtual environment
 
@@ -36,12 +38,16 @@ To run the api we need the uvicorn server.
 There are two options to start the API. First one is via:
 
 ```
-uvicorn cm_evaluator.api.main:app --reload
+uvicorn src.cm_evaluator.api.main:app --reload
 ```
 
 You can also specify various options like port, reload, etc (more on options can be read here: https://www.uvicorn.org/settings/)
 
 After that you can navigate to "<host>:<port>/docs" to use the swagger docs for the API (default under localhost will be http://127.0.0.1:8000/docs#)
+
+Sometimes a message might appear, indicating the transformer model is being downloaded. In order to use the project, you have to wait till its done:
+
+![Transformer donwloading](transformer_download.jpeg)
 
 ## Usage Videos
 
