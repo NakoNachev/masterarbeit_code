@@ -25,7 +25,7 @@ def main():
     # language will influence which metrics_ file to take and some of the metrics
     dataset_dir = "cm_evaluator.data.datasets.sample_dataset"
     reference_file = "reference_solution_en.json"
-    student_file = "student_solution_minimal_en.json"
+    student_file = "student_solution_full_en.json"
     language: Literal['en', 'de'] = "en"
     evaluator_type='C'
 

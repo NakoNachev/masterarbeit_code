@@ -49,6 +49,10 @@ Sometimes a message might appear, indicating the transformer model is being down
 
 ![Transformer donwloading](transformer_download.jpeg)
 
+## Tests
+
+The project contains unit tests written with pytest. To run them type "pytest" with an activated virtual environment, this will run all the tests.
+
 ## Usage Videos
 
 The project contains two tutorial videos that explain in detail how the evaluations can be started. These can be located under /tutorial_videos.
